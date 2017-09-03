@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>个人简历</title>
+	<link rel="stylesheet" href="css/geren.css" type="text/css">
+   <!--  <script src="js/geren.js" type="text/javascript"></script> -->
+        
+    
+</head>
+<body>
+    <section id="section-menu">
+    	<div class="nav" >
+    		<div style="float: left;text-align: left;width: 20%;line-height: 40px;margin-left: 10px;font-weight: bold;color: #fff";>
+
+           <span id="clock1"></span> 
+           <span id="clock2"></span>      
+           <span id="clock3"></span> 
+           <span id="clock4"></span> 
+            </div>
+    		<a class="nav-icon" id="ceMove" href="#">
+    				<div class="icon"></div>
+    				<div class="icon"></div>
+    				<div class="icon"></div>
+    		</a>
+    		<ul class="nav-ul">
+    			<li class="ul-list"><a href="#section-banner" class="li-content">HOME</a></li>
+    			<li class="ul-list"><a href="#about" class="li-content">ABOUT ME</a></li>
+    			<li class="ul-list"><a href="#my-skills" class="li-content">SKILLS</a></li>
+    			<li class="ul-list"><a href="#contact" class="li-content">CONTACT ME</a></li>
+    		</ul>
+    	<script>
+                var time=new Date();
+               var neirong1 = document.getElementById("clock1");
+               var neirong2 = document.getElementById("clock2");
+               var neirong3 = document.getElementById("clock3");
+               var neirong4 = document.getElementById("clock4");
+              
+               var weekday=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+
+               neirong1.innerHTML="今天是:"+time.getFullYear()+"年"
+               neirong2.innerHTML=(time.getMonth()+1)+"月"+time.getDate()+"日"
+               neirong3.innerHTML=weekday[time.getDay()]
+              
+               function clock(){
+                var time=new Date();
+                 neirong4.innerHTML=time.getHours()+":"+time.getMinutes()+":"+time.getSeconds();
+               }
+               setInterval(clock,10)
+        </script>
+
+        
+        	
+    	</div>
+        <div id="cebianlan" style="position: absolute;right: -200px;">
+            <ul>
+                <li><a href="#section-banner">HOME</a></li>
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#my-skills">SKILLS</a></li>
+                <li><a href="#contact">CONTACT ME</a></li>
+            </ul>
+        </div> 	
+         
+                   <script>
+                            var neirong5 = document.getElementById("ceMove");
+                            var neirong6 = document.getElementById("cebianlan");
+                            var time;
+                            neirong5.onfocus = function(){
+                                var time = setInterval(function(){
+                                    neirong6.style.right = parseInt(neirong6.style.right)+20+"px" ;
+                                    if(parseInt(neirong6.style.right)==0){
+                                    clearInterval(time);
+                                }
+                                },10)
+                                
+                            }
+                            neirong5.onblur = function(){
+                                var time = setInterval(function(){
+                                    neirong6.style.right = parseInt(neirong6.style.right)-20+"px" ;
+                                    if(parseInt(neirong6.style.right)==-200){
+                                    clearInterval(time);
+                                }
+                                },10)
+                                
+                            }
+                    </script>
+
+    </section>
+
+    <section id="section-banner">
+
+        <div class="container">
+            <div class="banner-content text-center">
+                    <h2 class="title">
+                        <div class="line-top"></div>
+                        Welcome To My Boke
+                        <div class="line-bottom"></div>
+                    </h2>
+                    <a href="" class="titletext">Learn More</a>
+            </div>  
+        </div>  
+    </section>			
+        <!-- banner结束 -->
+    		
+    <section id="about" name="about">
+     <div class="about-container">
+        <div class="about-info">
+            <h1>ABOUT ME</h1>
+            <h3>I LIKE WEB</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto illo totam reprehenderit dolor, tempora ipsum provident mollitia, veritatis illum saepe ea ratione officiis suscipit doloremque. </p>
+        </div>
+        <div class="about-list">
+            <div class="about-listleft">
+                <h2>WHAT I DO AND EXPERIENCE</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto illo totam reprehenderit dolor, tempora ipsum provident mollitia, veritatis illum saepe ea ratione officiis suscipit doloremque.</p>
+            </div>
+            <div class="about-listright">
+                <h2>MY GOALS</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto illo totam reprehenderit dolor, tempora ipsum provident mollitia, veritatis illum saepe ea ratione officiis suscipit doloremque.</p>
+            </div>
+        
+        </div>
+     </div>
+    </section>	
+        <!--  about结束 -->
+
+    
+    <div class="my-skills" id="my-skills">
+            <div class="my-list">
+                <div class="skills-info"><h2>MY SKILLS</h2></div>
+                <div class="skills-list">
+
+
+                                            <div class="col-1">
+                                                <div class="aa">
+                                                    <div class="circle" style="">
+                                                    <div class="left-zheng"><div class="left-circle"></div></div>
+                                                    <div class="right-zheng"><div class="right-circle"></div></div>
+                                                    </div>
+                                                    <div class="bottom"><span>20</span><span>%</span></div>
+                                                </div>
+                                                <p>HTML/CSS</p>
+                                            </div>   <!-- 第1个 -->
+
+                        
+                                            <div class="col-1" style="left: 650px">
+                                                <div class="aa">
+                                                   <div class="circle">
+                                                   <div class="left-zheng"><div class="left-circle"></div></div>
+                                                   <div class="right-zheng"><div class="right-circle"></div></div>
+                                                </div>
+                                                    <div class="bottom"><span>50</span><span>%</span></div>
+                                                </div>
+                                                   <p>HTML/CSS</p>
+                                            </div>   <!-- 第2个 -->
+                                            
+                                                
+
+
+                                            <div class="col-1" style="left: 1000px">
+                                                <div class="aa">
+                                                   <div class="circle">
+                                                   <div class="left-zheng"><div class="left-circle"></div></div>
+                                                    <div class="right-zheng"><div class="right-circle"></div></div>
+
+
+                                                </div>
+                                                <div class="bottom"><span>60</span><span>%</span></div>
+                                                </div>
+                                                    <p>HTML/CSS</p>
+                                            </div>   <!-- 第3个 -->
+
+
+                                            <div class="col-1" style="left: 1350px">
+                                               <div class="aa">
+                                                   <div class="circle">
+                                                   <div class="left-zheng"><div class="left-circle"></div></div>
+                                                   <div class="right-zheng"><div class="right-circle"></div></div>
+
+
+                                                </div>
+                                                <div class="bottom"><span>80</span><span>%</span></div>
+                                              </div>
+                                                <p>HTML/CSS</p>
+                                              </div> <!--  第4个 -->
+
+
+
+                    
+                   
+                
+               
+                    </div>  
+            </div>
+       </div>
+
+    <section id="picture">
+        <h1 style="color: #fff;padding:50px 0 100px 0;text-align: center;font-size: 35px;">旋转木马图</h1>
+        <div style="width:100%; height:400px ;position:relative ; perspective: 3600px;">
+           <div id="Move1" style="width: 300px;height: 200px;transform-style: preserve-3d;position: absolute;left: 50%;margin-left:-150px;cursor: pointer;">
+            <img src="img/aa.jpg" alt="" style="width: 300px;height: 200px;position: absolute;transform: rotateY(0deg) translateZ(468px);">
+            <img src="img/bb.jpg" alt="" style="width: 300px;height: 200px;position: absolute;transform: rotateY(40deg) translateZ(468px);">
+            <img src="img/cc.jpg" alt="" style="width: 300px;height: 200px;position: absolute;transform: rotateY(80deg) translateZ(468px);">
+            <img src="img/dd.jpg" alt="" style="width: 300px;height: 200px;position: absolute;transform: rotateY(120deg) translateZ(468px);">
+            <img src="img/ee.jpg" alt="" style="width: 300px;height: 200px;position: absolute;transform: rotateY(160deg) translateZ(468px);">
+            <img src="img/ff.jpg" alt="" style="width: 300px;height: 200px;position: absolute;transform: rotateY(200deg) translateZ(468px);">
+            <img src="img/gg.jpg" alt="" style="width: 300px;height: 200px;position: absolute;transform: rotateY(240deg) translateZ(468px);">
+            <img src="img/hh.jpg" alt="" style="width: 300px;height: 200px;position: absolute;transform: rotateY(280deg) translateZ(468px);">
+            <img src="img/ii.jpg" alt="" style="width: 300px;height: 200px;position: absolute;transform: rotateY(320deg) translateZ(468px);">
+            </div>
+                <script>
+                    // window.onload = function(){
+                        var Move = document.getElementById("Move1");
+                        Move.onclick = function(){
+                            startMove();
+                        }
+                        var z = 1;
+                        function startMove(){
+                            var Move = document.getElementById("Move1");
+                            var yes = Move.getElementsByTagName("img");
+                            // alert(yes.length);
+                            for(i=0;i<yes.length;i++){
+                                yes[i].style.transform = "rotateY("+(i-z)*40+"deg) translateZ(468px)";
+                            }
+                            
+                            z++;
+                        }
+                    // }
+                </script>
+        </div>
+    </section>
+    
+    <section id="picture-d" style="background: #ccc;height: 600px;">
+    <div id="picture-D" style="width: 1000px;height: 600px; position: relative;overflow: hidden;margin:0 auto;border:2px solid black;box-sizing: border-box;">
+        <div class="icon icon1" style="position: absolute;"><span><a id="pre"  href="javascript::"> &lt; </a></span></div>
+        <div class="icon icon2" style="position: absolute;"><span><a id="back"  href="javascript::"> &gt; </a></span></div>
+        <div id="buttoms" class="pictureD-bottom" style="position: absolute;height: 12px;width: 100px;bottom: 25px;left: 50%;margin-left: -50px;z-index: 1">
+            <span class="on" zindex="1" style="width: 10px;height: 10px;float: left;border-radius: 50%;border: 1px solid #fff;margin-right: 8px;"></span>
+            <span  zindex="2" style="width: 10px;height: 10px;float: left;border-radius: 50%;border: 1px solid #fff;margin-right: 8px;"></span>
+            <span zindex="3" style="width: 10px;height: 10px;float: left;border-radius: 50%;border: 1px solid #fff;margin-right: 8px;"></span>
+            <span zindex="4" style="width: 10px;height: 10px;float: left;border-radius: 50%;border: 1px solid #fff;margin-right: 8px;"></span> 
+            <span zindex="5" style="width: 10px;height: 10px;float: left;border-radius: 50%;border: 1px solid #fff;margin-right: 8px;"></span>
+        </div>
+        <div  id="X" style="width: 7000px;height: 600px;position: absolute;left: -1000px">
+            <img src="img/ee.jpg" alt="" style="width: 1000px;height: 600px;float: left;">
+            <img src="img/aa.jpg" alt="" style="width: 1000px;height: 600px;float: left;">
+            <img src="img/bb.jpg" alt="" style="width: 1000px;height: 600px;float: left;">
+            <img src="img/cc.jpg" alt="" style="width: 1000px;height: 600px;float: left;">
+            <img src="img/dd.jpg" alt="" style="width: 1000px;height: 600px;float: left;">
+            <img src="img/ee.jpg" alt="" style="width: 1000px;height: 600px;float: left;">
+            <img src="img/aa.jpg" alt="" style="width: 1000px;height: 600px;float: left;">
+            
+        </div>
+        <script>
+            window.onload = function (){
+                var a = document.getElementById("pre");
+                var b = document.getElementById("back");
+                var x = document.getElementById("X");
+                var lunbo = document.getElementById("picture-D")
+                var q = document.getElementById("buttoms").getElementsByTagName("span");
+                var index = 1 ;
+                var animated = false;
+                var timer;
+                // var y = x.getElementsByTagName{"img"};
+                function buttom (){
+                    for(i=0;i<q.length;i++){
+                        if(q[i].className == "on"){
+                            q[i].className = "";
+                            // break;
+                        }
+                    }
+                    q[index - 1].className = "on";
+                }
+                function animate (offset){
+                     animated = true;  
+                     var myleft = parseInt(x.style.left)-offset ; 
+                    // x.style.left =myleft +"px";
+                     // alert(myleft);
+                     var time = 400;
+                     var interval = 10;
+                     var speed = offset/(time/interval) ;
+                     // alert(speed);
+                     function go(){
+
+                        if( (speed>0 && parseInt(x.style.left) > myleft) || (speed < 0 && parseInt(x.style.left) < myleft) ){
+                          x.style.left = parseInt(x.style.left) - speed + "px";
+                         setTimeout(go, interval);
+                        }
+
+                         else{
+                            animated = false;
+                            x.style.left = myleft + "px";
+                            if( parseInt(x.style.left)>-1000){
+                            x.style.left = -5000 +"px";
+                            }
+                        if(parseInt(x.style.left)<-5000){
+                            x.style.left = -1000 + "px";
+                            }
+                          }
+                       } 
+                    
+                     go();
+                }
+
+                function play(){
+                    timer = setInterval(function(){
+                        b.onclick();
+                    },3000);
+                }
+
+                function stop(){
+                    clearInterval(timer);
+                }
+                b.onclick = function(){
+                    if(animated==false){
+                    if (index==5){
+                        index=1;
+                    }
+                    else{
+                         index = index +1;
+                    }
+                    }
+                    
+                    
+                    if (animated==false) {animate(1000);buttom(); }
+                     
+                     
+                    
+                }
+                a.onclick = function(){
+                    if(animated==false){
+                    if(index==1){
+                        index=5;
+                    }
+                    else{
+                        index = index-1;
+                    }
+                }
+                    
+                    
+                    if (animated==false) {animate(-1000);buttom(); }
+                }
+               for(i=0;i<q.length;i++){
+                q[i].onclick = function(){
+                    if (this.className =="on") {
+                        return;
+                    }
+                   
+                    var qindex = parseInt(this.getAttribute("zindex"));
+
+                    var offsets = (qindex-index)*1000;
+                    // alert(offsets);
+                    if (animated==false) {animate(offsets);index = qindex;  buttom();
+                     }
+                    
+                    
+                     // debugger;
+                }
+               }
+               lunbo.onmouseover = stop;
+               lunbo.onmouseout = play;
+               play();
+            }
+        </script>
+    </div>
+    </section>
+    <section id="contact">
+        <div style="text-align: center;font-size: 30px;margin-bottom: 70px;"><h1>CONTACT ME</h1></div>
+        <div style="width: 1200px;height: 300px;margin: 0 auto;overflow: hidden;">
+            <div id="AA" style="width: 500px;height: 300px;float: left">
+            <form action="">
+            <input type="text" value="Name*">
+            <input type="text" value="Email*">
+            <input type="text" value="Phone*">
+            </form>
+            </div>
+            <div  style="width: 500px;height: 300px;float: right;">
+                 <textarea name="" id="BB" style="resize: none;">Message</textarea></div>
+
+        </div>
+        <input class="submit-class" type="submit" value="OK" style="width: 150px;height: 40px;margin-left: 50%;transform: translateX(-75px);margin-top: 50px;">
+        <script>
+            
+                var A = document.getElementById("AA");
+                var B = A.getElementsByTagName("input");
+                var C = document.getElementById("BB");
+                
+                for(i=0;i<B.length;i++){
+                    B[i].onfocus = function(){
+                        // alert(this.value);
+                        this.value = "";
+                        // ruturn();
+                        // alert(B.length);
+                         // alert(this.value); 
+                     }
+                    C.onfocus = function(){
+                            C.innerHTML = "";
+                        
+                    }
+
+                    B[0].onblur =function(){
+                        // alert(this.value);
+                            this.value = "Name*";
+                        
+                        
+                    }
+                    B[1].onblur =function(){
+                        // alert(this.value);
+                            this.value = "Email*";
+                        
+                        
+                    }
+                    B[2].onblur =function(){
+                        // alert(this.value);
+                            this.value = "Phone*";
+                        
+                        
+                    }
+                    C.onblur = function(){
+                        C.innerHTML="Message";
+                    }
+                }
+                  
+                    // B[0].onblur =function(){
+                        
+                    //         this.value = "dad";
+                    //     alert(this.value);
+                    // }
+           
+        </script>
+    </section>
+</body>
+</html>	
+	
